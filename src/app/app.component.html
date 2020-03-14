@@ -1,2 +1,5 @@
-<ap-photo url = "https://conviteasaude.com.br/wp-content/uploads/2017/08/spitz-alemao-e1575467187871.jpg" description = "Natureza"></ap-photo>
-<ap-photo url = "https://www.curtamais.com.br/uploads/conteudos/c3a9b36d2b70e47b09a984f499995952.jpg" description = "Spitz"></ap-photo>
+<ap-photo 
+*ngFor = " let photo of photos" 
+[url] = "photo.url" 
+[description] = "photo.description">
+</ap-photo>
