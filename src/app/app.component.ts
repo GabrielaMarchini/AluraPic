@@ -28,8 +28,8 @@ export class AppComponent {
   ];
    
 
-{
 
-  
+
+
 }
 
