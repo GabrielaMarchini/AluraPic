@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { PhotoService } from './photos/photo/photo.service';
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,29 +11,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  photos = [
+  photos : any [] = [];
 
-  {
-    url:'https://conviteasaude.com.br/wp-content/uploads/2017/08/spitz-alemao-e1575467187871.jpg',
-    description: 'Natureza'
-  },
+  constructor(photoService :PhotoService ) {
+   photoService
 
-  {
-        url: 'https://www.curtamais.com.br/uploads/conteudos/c3a9b36d2b70e47b09a984f499995952.jpg' ,
-    description:'Spitz'
-  },
+   .listFromUser ('flavio')
+   .subscribe (photos => 
+   {console.log (photos [0].UserId);
+    this.photos = photos
+    
+   });
+
+  }
+   
+}
+
+
+    
+  
+    
+
 
   
-  {    url: 'https://i.pinimg.com/originals/a7/48/18/a748184b9fb49f860fca0e49b277f833.jpg' ,
-      description:'Sol'
 
-}
-
-  ];
-   
+  
 
 
-
-
-}
-
+  
+  
