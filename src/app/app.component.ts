@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-import { PhotoService } from './photos/photo/photo.service';
-
-
-
-
+ 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,21 +7,11 @@ import { PhotoService } from './photos/photo/photo.service';
 })
 export class AppComponent {
   
-  photos : any [] = [];
+   }
 
-  constructor(photoService :PhotoService ) {
-   photoService
-
-   .listFromUser ('flavio')
-   .subscribe (photos => 
-   {console.log (photos [0].UserId);
-    this.photos = photos
-    
-   });
-
-  }
+  
    
-}
+
 
 
     
