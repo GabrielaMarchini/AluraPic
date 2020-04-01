@@ -1,13 +1,20 @@
 <div class="text-center mt-3 mb-3">
     <form>
+        <i aria-hidden="true" class="fa fa-search mr-1"></i>
         <input
             class="rounded"
             type="search"
             placeholder="search..."
             autofocus
-            (keyup)= "filter = $event.target.value"
+            (keyup)= "debounce.next($event.target.value)"
         >
         
     </form>
-</div>
-<ap-photos [photos] = "photos | FilterByDescription : filter" ap-photos>
+<div>
+
+<ap-photos [photos] = "photos | FilterByDescription : filter" ></ap-photos>
+
+<ap-load-button
+    (click)="load()"
+    [hasMore]="hasMore">
+</ap-load-button>

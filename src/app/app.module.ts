@@ -10,7 +10,10 @@ import { PhotosModule } from './photos/photos.module';
 
 @NgModule({
   declarations:[ 
-    AppComponent
+    AppComponent,
+    
+
+
     
    
   ],
@@ -18,7 +21,8 @@ import { PhotosModule } from './photos/photos.module';
     BrowserModule,
     PhotosModule,
     AppRoutingModule,
-    ErrorsModule
+    ErrorsModule,
+    
    
     
   ],
