@@ -1,3 +1,4 @@
+import { HomeModule } from './home/home.module';
 import { ErrorsModule } from './errors/errors.module';
 import { AppRoutingModule } from './app.routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +23,7 @@ import { PhotosModule } from './photos/photos.module';
     PhotosModule,
     AppRoutingModule,
     ErrorsModule,
+    HomeModule
     
    
     
